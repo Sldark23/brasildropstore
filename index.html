@@ -1,28 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brasildrop Store | pagina inicia</title>
+  <title>BrasilDrop Store - Loja de Dropshipping</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Brasildrop Store</h1>
-  <div id="products-container"></div>
+  <header>
+    <h1>BrasilDrop Store</h1>
+  </header>
+  
+  <div class="products-container" id="products-container"></div>
 
-  <script>
-    fetch('products.json')
-      .then(response => response.json())
-      .then(data => {
-        const productsContainer = document.getElementById('products-container');
-        
-        data.forEach(product => {
-          const scriptElement = document.createElement('script');
-          scriptElement.src = product.productUrl;
-          scriptElement.classList.add('ymp-script');
-          productsContainer.appendChild(scriptElement);
-        });
-      })
-      .catch(error => console.error('Erro ao carregar produtos:', error));
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
